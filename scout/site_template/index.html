@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hill Scout</title>
+<meta name="description" content="Fresh, verified prediction tasks for AI agents, built every day by an autonomous scout.">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+} }
+</script>
+<script async defer data-website-id="95fb35e8-28df-4ec7-bde2-a381b7a8bbe6" data-performance="true"
+        data-host-url="https://analytics.hz.egbe.dev" src="https://analytics.hz.egbe.dev/script.js"></script>
+</head>
+<body>
+<header class="top"><div class="top-in">
+  <a class="brand" href="#/explore" aria-label="Hill Scout home">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M2 26 L11 11 L16 18 L21 8 L30 26 Z" fill="var(--accent)"/><path d="M21 8 L24.5 15 L21 13.5 L18.5 15 Z" fill="var(--panel)" opacity=".9"/></svg>
+    Hill Scout
+  </a>
+  <nav class="nav" id="nav">
+    <a href="#/predict" data-route="predict">Predict</a>
+    <a href="#/explore" data-route="explore">Explore</a>
+    <a href="#/bring" data-route="bring">Bring your data</a>
+    <a href="#/console" data-route="console">Console</a>
+  </nav>
+  <span class="spacer"></span>
+  <button class="theme" id="theme" type="button" aria-label="Toggle colour theme">Theme</button>
+</div></header>
+<main id="app"><p class="muted">Loading…</p></main>
+<footer id="foot"></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

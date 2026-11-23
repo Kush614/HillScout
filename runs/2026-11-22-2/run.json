@@ -1,0 +1,212 @@
+{
+  "run_id": "2026-11-22-2",
+  "started": "2026-11-22T22:07:02+00:00",
+  "finished": "2026-11-22T22:11:42+00:00",
+  "args": {
+    "max_hills": 3,
+    "max_candidates": 12,
+    "max_builds": 12
+  },
+  "sources": {
+    "openml": {
+      "available": true,
+      "why": "public API, no login",
+      "discovered": 250,
+      "in_scope": 186
+    },
+    "manual": {
+      "available": true,
+      "why": "candidates.txt",
+      "discovered": 10,
+      "in_scope": 10
+    },
+    "kaggle": {
+      "available": false,
+      "why": "no Kaggle credentials (~/.kaggle/kaggle.json or KAGGLE_USERNAME/KAGGLE_KEY)"
+    }
+  },
+  "pool_in_scope": 196,
+  "pool_unseen": 193,
+  "considered": [
+    {
+      "rank": 1,
+      "key": "openml:47108",
+      "title": "bkd1kmc1Dataset5",
+      "bucket": "openml|regression|small|f>60",
+      "rate": 0.6667,
+      "sample": 0.9545,
+      "reason": "bucket openml|regression|small|f>60: rate 0.67, 1 prior attempt(s), sampled 0.955",
+      "attempted": true
+    },
+    {
+      "rank": 2,
+      "key": "openml:47171",
+      "title": "Uber_Ride_Analytics",
+      "bucket": "openml|classification|large|f20-60",
+      "rate": 0.5,
+      "sample": 0.9946,
+      "reason": "bucket openml|classification|large|f20-60: rate 0.50, untried bucket (explore), sampled 0.995",
+      "attempted": true
+    },
+    {
+      "rank": 3,
+      "key": "openml:47023",
+      "title": "MedMCQA",
+      "bucket": "openml|classification|large|f<20",
+      "rate": 0.5,
+      "sample": 0.9905,
+      "reason": "bucket openml|classification|large|f<20: rate 0.50, untried bucket (explore), sampled 0.991",
+      "attempted": true
+    },
+    {
+      "rank": 4,
+      "key": "manual:40701",
+      "title": "churn",
+      "bucket": "manual|classification|small|f20-60",
+      "rate": 0.5,
+      "sample": 0.9766,
+      "reason": "bucket manual|classification|small|f20-60: rate 0.50, untried bucket (explore), sampled 0.977",
+      "attempted": true
+    },
+    {
+      "rank": 5,
+      "key": "openml:47107",
+      "title": "bkd1kmc1",
+      "bucket": "openml|regression|small|f>60",
+      "rate": 0.6667,
+      "sample": 0.8971,
+      "reason": "bucket openml|regression|small|f>60: rate 0.67, 1 prior attempt(s), sampled 0.897",
+      "attempted": true
+    },
+    {
+      "rank": 6,
+      "key": "openml:47003",
+      "title": "melbourne_airbnb",
+      "bucket": "openml|classification|medium|f>60",
+      "rate": 0.5,
+      "sample": 0.9952,
+      "reason": "bucket openml|classification|medium|f>60: rate 0.50, untried bucket (explore), sampled 0.995",
+      "attempted": true
+    },
+    {
+      "rank": 7,
+      "key": "manual:44",
+      "title": "spambase",
+      "bucket": "manual|classification|small|f20-60",
+      "rate": 0.5,
+      "sample": 0.8416,
+      "reason": "bucket manual|classification|small|f20-60: rate 0.50, untried bucket (explore), sampled 0.842",
+      "attempted": true
+    },
+    {
+      "rank": 8,
+      "key": "openml:47016",
+      "title": "TRS_SCZ",
+      "bucket": "openml|regression|medium|f20-60",
+      "rate": 0.6667,
+      "sample": 0.9782,
+      "reason": "bucket openml|regression|medium|f20-60: rate 0.67, 1 prior attempt(s), sampled 0.978",
+      "attempted": true
+    },
+    {
+      "rank": 9,
+      "key": "openml:48248",
+      "title": "food_calorie_searches_36_languages",
+      "bucket": "openml|regression|small|f<20",
+      "rate": 0.5,
+      "sample": 0.9834,
+      "reason": "bucket openml|regression|small|f<20: rate 0.50, untried bucket (explore), sampled 0.983",
+      "attempted": true
+    },
+    {
+      "rank": 10,
+      "key": "manual:1590",
+      "title": "adult",
+      "bucket": "manual|classification|medium|f<20",
+      "rate": 0.5,
+      "sample": 0.9941,
+      "reason": "bucket manual|classification|medium|f<20: rate 0.50, untried bucket (explore), sampled 0.994",
+      "attempted": false
+    },
+    {
+      "rank": 11,
+      "key": "openml:48199",
+      "title": "TabClustPFN-uci-spambase-v1-b86e2301",
+      "bucket": "openml|classification|small|f20-60",
+      "rate": 0.5,
+      "sample": 0.9632,
+      "reason": "bucket openml|classification|small|f20-60: rate 0.50, untried bucket (explore), sampled 0.963",
+      "attempted": false
+    },
+    {
+      "rank": 12,
+      "key": "openml:46908",
+      "title": "APSFailure",
+      "bucket": "openml|classification|large|f>60",
+      "rate": 0.5,
+      "sample": 0.9705,
+      "reason": "bucket openml|classification|large|f>60: rate 0.50, untried bucket (explore), sampled 0.970",
+      "attempted": false
+    }
+  ],
+  "buckets_before": {
+    "manual|regression|medium|f<20": {
+      "successes": 1,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.6667
+    },
+    "openml|regression|medium|f20-60": {
+      "successes": 1,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.6667
+    },
+    "openml|regression|small|f>60": {
+      "successes": 1,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.6667
+    }
+  },
+  "buckets_after": {
+    "manual|classification|small|f20-60": {
+      "successes": 2,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.75
+    },
+    "manual|regression|medium|f<20": {
+      "successes": 1,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.6667
+    },
+    "openml|classification|large|f20-60": {
+      "successes": 0,
+      "failures": 1,
+      "engagement_bonus": 0,
+      "rate": 0.3333
+    },
+    "openml|regression|medium|f20-60": {
+      "successes": 1,
+      "failures": 1,
+      "engagement_bonus": 0,
+      "rate": 0.5
+    },
+    "openml|regression|small|f<20": {
+      "successes": 1,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.6667
+    },
+    "openml|regression|small|f>60": {
+      "successes": 1,
+      "failures": 2,
+      "engagement_bonus": 0,
+      "rate": 0.4
+    }
+  },
+  "memory_before": "# Hill Scout memory\n\n_Rewritten after run 2026-11-22-1. Read at the start of every run._\n\n## Bucket success rates\n\n| bucket | shipped | failed | climb bonus | rate |\n|---|---|---|---|---|\n| manual|regression|medium|f<20 | 1 | 0 | 0 | 0.67 |\n| openml|regression|medium|f20-60 | 1 | 0 | 0 | 0.67 |\n| openml|regression|small|f>60 | 1 | 0 | 0 | 0.67 |\n\n## Lessons\n\n- regression datasets shipped 3 of 3 attempts\n- OpenML candidates shipped 2 of 2 attempts\n- datasets of 10k-50k rows shipped 2 of 2 attempts\n",
+  "split_seed": 20261122
+}

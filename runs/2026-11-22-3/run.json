@@ -1,0 +1,191 @@
+{
+  "run_id": "2026-11-22-3",
+  "started": "2026-11-23T01:25:56+00:00",
+  "finished": "2026-11-23T01:30:06+00:00",
+  "args": {
+    "max_hills": 3,
+    "max_candidates": 8,
+    "max_builds": 8,
+    "sources": [
+      "kaggle"
+    ]
+  },
+  "sources": {
+    "kaggle": {
+      "available": true,
+      "why": "public Kaggle API, no login",
+      "discovered": 15,
+      "in_scope": 10
+    }
+  },
+  "pool_in_scope": 10,
+  "pool_unseen": 10,
+  "considered": [
+    {
+      "rank": 1,
+      "key": "kaggle:uciml/red-wine-quality-cortez-et-al-2009",
+      "title": "Red Wine Quality",
+      "bucket": "kaggle|classification|small|f<20",
+      "rate": 0.5,
+      "sample": 0.9378,
+      "reason": "bucket kaggle|classification|small|f<20: rate 0.50, untried bucket (explore), sampled 0.938",
+      "attempted": true
+    },
+    {
+      "rank": 2,
+      "key": "kaggle:pavansubhasht/ibm-hr-analytics-attrition-dataset",
+      "title": "IBM HR Analytics Employee Attrition & Performance",
+      "bucket": "kaggle|classification|small|f20-60",
+      "rate": 0.5,
+      "sample": 0.9317,
+      "reason": "bucket kaggle|classification|small|f20-60: rate 0.50, untried bucket (explore), sampled 0.932",
+      "attempted": true
+    },
+    {
+      "rank": 3,
+      "key": "kaggle:abdullah1afify/ntl-generations",
+      "title": "Name That LLM: extra GPT and Gemini generations",
+      "bucket": "kaggle|classification|small|f<20",
+      "rate": 0.5,
+      "sample": 0.9837,
+      "reason": "bucket kaggle|classification|small|f<20: rate 0.50, untried bucket (explore), sampled 0.984",
+      "attempted": true
+    },
+    {
+      "rank": 4,
+      "key": "kaggle:adityadesai13/used-car-dataset-ford-and-mercedes",
+      "title": "100,000 UK Used Car Data set",
+      "bucket": "kaggle|regression|medium|f<20",
+      "rate": 0.5,
+      "sample": 0.9266,
+      "reason": "bucket kaggle|regression|medium|f<20: rate 0.50, untried bucket (explore), sampled 0.927",
+      "attempted": true
+    },
+    {
+      "rank": 5,
+      "key": "kaggle:imakash3011/customer-personality-analysis",
+      "title": "Customer Personality Analysis",
+      "bucket": "kaggle|regression|small|f20-60",
+      "rate": 0.5,
+      "sample": 0.547,
+      "reason": "bucket kaggle|regression|small|f20-60: rate 0.50, untried bucket (explore), sampled 0.547",
+      "attempted": false
+    },
+    {
+      "rank": 6,
+      "key": "kaggle:harlfoxem/housesalesprediction",
+      "title": "House Sales in King County, USA",
+      "bucket": "kaggle|regression|medium|f20-60",
+      "rate": 0.5,
+      "sample": 0.8472,
+      "reason": "bucket kaggle|regression|medium|f20-60: rate 0.50, untried bucket (explore), sampled 0.847",
+      "attempted": false
+    },
+    {
+      "rank": 7,
+      "key": "kaggle:arashnic/hr-analytics-job-change-of-data-scientists",
+      "title": "HR Analytics: Job Change of Data Scientists",
+      "bucket": "kaggle|classification|medium|f<20",
+      "rate": 0.5,
+      "sample": 0.0264,
+      "reason": "bucket kaggle|classification|medium|f<20: rate 0.50, untried bucket (explore), sampled 0.026",
+      "attempted": false
+    }
+  ],
+  "buckets_before": {
+    "manual|classification|small|f20-60": {
+      "successes": 2,
+      "failures": 0,
+      "engagement_bonus": 1,
+      "rate": 0.8
+    },
+    "manual|regression|medium|f<20": {
+      "successes": 1,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.6667
+    },
+    "openml|classification|large|f20-60": {
+      "successes": 0,
+      "failures": 1,
+      "engagement_bonus": 0,
+      "rate": 0.3333
+    },
+    "openml|regression|medium|f20-60": {
+      "successes": 1,
+      "failures": 1,
+      "engagement_bonus": 0,
+      "rate": 0.5
+    },
+    "openml|regression|small|f<20": {
+      "successes": 1,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.6667
+    },
+    "openml|regression|small|f>60": {
+      "successes": 1,
+      "failures": 2,
+      "engagement_bonus": 0,
+      "rate": 0.4
+    }
+  },
+  "buckets_after": {
+    "kaggle|classification|small|f20-60": {
+      "successes": 1,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.6667
+    },
+    "kaggle|classification|small|f<20": {
+      "successes": 1,
+      "failures": 1,
+      "engagement_bonus": 0,
+      "rate": 0.5
+    },
+    "kaggle|regression|medium|f<20": {
+      "successes": 1,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.6667
+    },
+    "manual|classification|small|f20-60": {
+      "successes": 2,
+      "failures": 0,
+      "engagement_bonus": 1,
+      "rate": 0.8
+    },
+    "manual|regression|medium|f<20": {
+      "successes": 1,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.6667
+    },
+    "openml|classification|large|f20-60": {
+      "successes": 0,
+      "failures": 1,
+      "engagement_bonus": 0,
+      "rate": 0.3333
+    },
+    "openml|regression|medium|f20-60": {
+      "successes": 1,
+      "failures": 1,
+      "engagement_bonus": 0,
+      "rate": 0.5
+    },
+    "openml|regression|small|f<20": {
+      "successes": 1,
+      "failures": 0,
+      "engagement_bonus": 0,
+      "rate": 0.6667
+    },
+    "openml|regression|small|f>60": {
+      "successes": 1,
+      "failures": 2,
+      "engagement_bonus": 0,
+      "rate": 0.4
+    }
+  },
+  "memory_before": "# Hill Scout memory\n\n_Rewritten after run 2026-11-22-2. Read at the start of every run._\n\n## Bucket success rates\n\n| bucket | shipped | failed | climb bonus | rate |\n|---|---|---|---|---|\n| manual|classification|small|f20-60 | 2 | 0 | 0 | 0.75 |\n| manual|regression|medium|f<20 | 1 | 0 | 0 | 0.67 |\n| openml|regression|small|f<20 | 1 | 0 | 0 | 0.67 |\n| openml|regression|medium|f20-60 | 1 | 1 | 0 | 0.50 |\n| openml|regression|small|f>60 | 1 | 2 | 0 | 0.40 |\n| openml|classification|large|f20-60 | 0 | 1 | 0 | 0.33 |\n\n## Lessons\n\n- datasets under 10k rows shipped 4 of 6 attempts\n- datasets with 20-60 features shipped 3 of 5 attempts\n- Manual candidates shipped 3 of 3 attempts\n- datasets with over 60 features failed at data preparation 2 of 3 times\n- datasets of 10k-50k rows shipped 2 of 3 attempts\n- classification datasets shipped 2 of 3 attempts\n- datasets with under 20 features shipped 2 of 2 attempts\n- 2 candidates were skipped before download: license\n",
+  "split_seed": 20261122
+}

@@ -1,0 +1,75 @@
+[17:25:56] run 2026-11-22-3: max_hills=3 max_candidates=8
+[17:25:56] memory.md: read, lessons below
+[17:25:56]   memory - datasets under 10k rows shipped 4 of 6 attempts
+[17:25:56]   memory - datasets with 20-60 features shipped 3 of 5 attempts
+[17:25:56]   memory - Manual candidates shipped 3 of 3 attempts
+[17:25:56]   memory - datasets with over 60 features failed at data preparation 2 of 3 times
+[17:25:56]   memory - datasets of 10k-50k rows shipped 2 of 3 attempts
+[17:25:56]   memory - classification datasets shipped 2 of 3 attempts
+[17:25:56]   memory - datasets with under 20 features shipped 2 of 2 attempts
+[17:25:56]   memory - 2 candidates were skipped before download: license
+[17:25:59] engagement: read climb counts for 7 published hill(s): scout-churn-40701=1
+[17:25:59] engagement: bucket manual|classification|small|f20-60 gets +1 success from climbs (rate 0.80)
+[17:25:59] sources limited to: kaggle
+[17:26:17] source kaggle: 15 discovered, 10 in scope (rows/features/task type)
+[17:26:17] pool: 10 in scope, 10 not seen before
+[17:26:17] excluding 0 unseen candidate(s) whose name family was attempted in an earlier run
+[17:26:17] picked 7 candidates (Thompson sampling, one per name family):
+[17:26:17]    1. kaggle:uciml/red-wine-quality-cortez-et-al-2009 'Red Wine Quality' (1599 rows, 11 feats) -- bucket kaggle|classification|small|f<20: rate 0.50, untried bucket (explore), sampled 0.938
+[17:26:17]    2. kaggle:pavansubhasht/ibm-hr-analytics-attrition-dataset 'IBM HR Analytics Employee Attrition & Performance' (1470 rows, 34 feats) -- bucket kaggle|classification|small|f20-60: rate 0.50, untried bucket (explore), sampled 0.932
+[17:26:17]    3. kaggle:abdullah1afify/ntl-generations 'Name That LLM: extra GPT and Gemini generations' (5726 rows, 8 feats) -- bucket kaggle|classification|small|f<20: rate 0.50, untried bucket (explore), sampled 0.984
+[17:26:17]    4. kaggle:adityadesai13/used-car-dataset-ford-and-mercedes '100,000 UK Used Car Data set' (17965 rows, 8 feats) -- bucket kaggle|regression|medium|f<20: rate 0.50, untried bucket (explore), sampled 0.927
+[17:26:17]    5. kaggle:imakash3011/customer-personality-analysis 'Customer Personality Analysis' (2240 rows, 28 feats) -- bucket kaggle|regression|small|f20-60: rate 0.50, untried bucket (explore), sampled 0.547
+[17:26:17]    6. kaggle:harlfoxem/housesalesprediction 'House Sales in King County, USA' (21613 rows, 20 feats) -- bucket kaggle|regression|medium|f20-60: rate 0.50, untried bucket (explore), sampled 0.847
+[17:26:17]    7. kaggle:arashnic/hr-analytics-job-change-of-data-scientists 'HR Analytics: Job Change of Data Scientists' (19158 rows, 13 feats) -- bucket kaggle|classification|medium|f<20: rate 0.50, untried bucket (explore), sampled 0.026
+[17:26:17] [1/7] kaggle:uciml/red-wine-quality-cortez-et-al-2009 'Red Wine Quality'
+[17:26:17]   built scout-red-wine-quality-kg-408e01 (0.13 MB, 1599 rows, classification); running gates
+[17:27:05]     PASS valid: hills check passed and commit succeeded
+[17:27:05]     PASS baseline_scores: baseline 0.1667
+[17:27:05]     PASS deterministic: two reference evals differ by 0.00000
+[17:27:05]     PASS fast: reference eval took 24.1s (limit 120s)
+[17:27:05]     PASS headroom: reference beats baseline by 0.1708 balanced accuracy (need 0.05)
+[17:27:05]     PASS not_trivial: reference balanced accuracy 0.3375 (must be under 0.98)
+[17:27:05]     PASS no_leak: best single feature 'alcohol' scores 0.2837 vs reference 0.3375
+[17:27:05]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 312 rows; expected one per row of test_features.csv (319))
+[17:27:14]   publish: pushed scout-red-wine-quality-kg-408e01 as a private hill: https://app.autolab.ai/hills/kush614/scout-red-wine-quality-kg-408e01
+[17:27:14]   SHIPPED scout-red-wine-quality-kg-408e01: baseline 0.1667 -> reference 0.3375; bundle runs/2026-11-22-3/bundles/scout-red-wine-quality-kg-408e01.hill.tar
+[17:27:14] [2/7] kaggle:pavansubhasht/ibm-hr-analytics-attrition-dataset 'IBM HR Analytics Employee Attrition & Performance'
+[17:27:15]   built scout-ibm-hr-analytics-emplo-kg-49a2b7 (0.25 MB, 1470 rows, classification); running gates
+[17:28:04]     PASS valid: hills check passed and commit succeeded
+[17:28:04]     PASS baseline_scores: baseline 0.5000
+[17:28:04]     PASS deterministic: two reference evals differ by 0.00000
+[17:28:04]     PASS fast: reference eval took 24.4s (limit 120s)
+[17:28:04]     PASS headroom: reference beats baseline by 0.2132 balanced accuracy (need 0.05)
+[17:28:04]     PASS not_trivial: reference balanced accuracy 0.7132 (must be under 0.98)
+[17:28:04]     PASS no_leak: best single feature '﻿Age' scores 0.5711 vs reference 0.7132
+[17:28:04]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 287 rows; expected one per row of test_features.csv (294))
+[17:28:15]   publish: pushed scout-ibm-hr-analytics-emplo-kg-49a2b7 as a private hill: https://app.autolab.ai/hills/kush614/scout-ibm-hr-analytics-emplo-kg-49a2b7
+[17:28:15]   SHIPPED scout-ibm-hr-analytics-emplo-kg-49a2b7: baseline 0.5000 -> reference 0.7132; bundle runs/2026-11-22-3/bundles/scout-ibm-hr-analytics-emplo-kg-49a2b7.hill.tar
+[17:28:15] [3/7] kaggle:abdullah1afify/ntl-generations 'Name That LLM: extra GPT and Gemini generations'
+[17:28:15]   built scout-name-that-llm-extra-gp-kg-824a09 (4.68 MB, 5726 rows, classification); running gates
+[17:29:05]     PASS valid: hills check passed and commit succeeded
+[17:29:05]     PASS baseline_scores: baseline 0.1250
+[17:29:05]     PASS deterministic: two reference evals differ by 0.00000
+[17:29:05]     PASS fast: reference eval took 24.5s (limit 120s)
+[17:29:05]     PASS headroom: reference beats baseline by 0.8750 balanced accuracy (need 0.05)
+[17:29:05]     FAIL not_trivial: reference balanced accuracy 1.0000 (must be under 0.98)
+[17:29:05]     FAIL no_leak: best single feature 'model_seen' scores 1.0000 vs reference 1.0000
+[17:29:05]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 1137 rows; expected one per row of test_features.csv (1144))
+[17:29:05]   rejected scout-name-that-llm-extra-gp-kg-824a09: not_trivial: reference balanced accuracy 1.0000 (must be under 0.98)
+[17:29:05] [4/7] kaggle:adityadesai13/used-car-dataset-ford-and-mercedes '100,000 UK Used Car Data set'
+[17:29:05]   built scout-100-000-uk-used-car-da-kg-057598 (1.14 MB, 17965 rows, regression); running gates
+[17:29:56]     PASS valid: hills check passed and commit succeeded
+[17:29:56]     PASS baseline_scores: baseline 4652.2521
+[17:29:56]     PASS deterministic: two reference evals differ by 0.00000
+[17:29:56]     PASS fast: reference eval took 25.2s (limit 120s)
+[17:29:56]     PASS headroom: reference RMSE is 74.7% lower than baseline (need 10%)
+[17:29:56]     PASS not_trivial: reference RMSE 1179 vs baseline 4652
+[17:29:56]     PASS no_leak: best single feature 'year' RMSE 3331 vs reference 1179
+[17:29:56]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 3585 rows; expected one per row of test_features.csv (3592))
+[17:30:06]   publish: pushed scout-100-000-uk-used-car-da-kg-057598 as a private hill: https://app.autolab.ai/hills/kush614/scout-100-000-uk-used-car-da-kg-057598
+[17:30:06]   SHIPPED scout-100-000-uk-used-car-da-kg-057598: baseline 4652.2521 -> reference 1179.3070; bundle runs/2026-11-22-3/bundles/scout-100-000-uk-used-car-da-kg-057598.hill.tar
+[17:30:06] learned: buckets.json updated (9 buckets); memory.md rewritten
+[17:30:06] catalog: catalog/index.html regenerated (local file; not hosted publicly)
+[17:30:06] site: site rebuilt locally; redeploying it is a separate, approved step
+[17:30:06] done: 4 attempted, 4 built, 3 shipped; report runs/2026-11-22-3/report.md

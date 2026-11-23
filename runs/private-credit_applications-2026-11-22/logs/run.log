@@ -1,0 +1,13 @@
+[15:15:30] private hill from examples/credit_applications.csv: target 'class', 1000 rows, 20 columns
+[15:15:30]   built private-credit-applications (0.17 MB, 1000 rows, classification); running gates
+[15:16:29]     PASS valid: hills check passed and commit succeeded
+[15:16:29]     PASS baseline_scores: baseline 0.5000
+[15:16:29]     PASS deterministic: two reference evals differ by 0.00000
+[15:16:29]     PASS fast: reference eval took 28.7s (limit 120s)
+[15:16:29]     PASS headroom: reference beats baseline by 0.1929 balanced accuracy (need 0.05)
+[15:16:29]     PASS not_trivial: reference balanced accuracy 0.6929 (must be under 0.98)
+[15:16:29]     PASS no_leak: best single feature 'credit_amount' scores 0.5509 vs reference 0.6929
+[15:16:29]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 193 rows; expected one per row of test_features.csv (200))
+[15:16:33]   publish: pushed private-credit-applications as a private hill: https://app.autolab.ai/hills/kush614/private-credit-applications
+[15:16:33]   SHIPPED private-credit-applications: baseline 0.5000 -> reference 0.6929; bundle runs/private-credit_applications-2026-11-22/bundles/private-credit-applications.hill.tar
+[15:16:33] done: shipped; report runs/private-credit_applications-2026-11-22/report.md

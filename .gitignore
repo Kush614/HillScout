@@ -1,0 +1,26 @@
+.venv/
+__pycache__/
+state/cache/
+runs/*/bundles/
+.autolab/
+.env.local
+/.egbe/
+!/egbe-docs/marketing/campaigns/instantly/outreach.db
+/egbe-docs/**/.local/
+/egbe-docs/**/.env
+/egbe-docs/**/.env.*
+/egbe-docs/**/*.lock
+/egbe-docs/**/*.tmp
+/egbe-docs/**/*-wal
+/egbe-docs/**/*-shm
+/egbe-docs/**/*-journal
+.gstack/
+# generated or local-only
+site/
+catalog/
+.pytest_cache/
+# Egbe workspace files (local setup, downloaded docs)
+egbe-docs/
+EGBE.md
+CLAUDE.md
+.dockerignore

@@ -1,0 +1,11 @@
+# Manual safety net: OpenML dataset ids (openml:<id>). Same license/target rules apply.
+openml:1590   # adult
+openml:1461   # bank-marketing
+openml:151    # electricity
+openml:1471   # eeg-eye-state
+openml:44     # spambase
+openml:4534   # PhishingWebsites
+openml:537    # houses (regression)
+openml:1489   # phoneme
+openml:40701  # churn
+openml:42225  # diamonds (regression)

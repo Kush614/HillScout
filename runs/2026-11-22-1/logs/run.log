@@ -1,0 +1,54 @@
+[14:02:35] run 2026-11-22-1: max_hills=3 max_candidates=12
+[14:02:35] memory.md: empty (first run)
+[14:02:35] source openml: 250 discovered, 186 in scope (rows/features/task type)
+[14:02:35] source manual: 10 discovered, 10 in scope (rows/features/task type)
+[14:02:35] source kaggle: skipped (no Kaggle credentials (~/.kaggle/kaggle.json or KAGGLE_USERNAME/KAGGLE_KEY))
+[14:02:35] pool: 196 in scope, 196 not seen before
+[14:02:35] picked 12 candidates (Thompson sampling, one per name family):
+[14:02:35]    1. openml:47177 'check_times' (13626 rows, 23 feats) -- bucket openml|regression|medium|f20-60: rate 0.50, untried bucket (explore), sampled 0.972
+[14:02:35]    2. manual:537 'houses' (20640 rows, 8 feats) -- bucket manual|regression|medium|f<20: rate 0.50, untried bucket (explore), sampled 0.996
+[14:02:35]    3. openml:47285 'AmesHousing_Analitica_Kag' (2930 rows, 81 feats) -- bucket openml|regression|small|f>60: rate 0.50, untried bucket (explore), sampled 0.986
+[14:02:35]    4. openml:47023 'MedMCQA' (182822 rows, 9 feats) -- bucket openml|classification|large|f<20: rate 0.50, untried bucket (explore), sampled 0.933
+[14:02:35]    5. openml:46908 'APSFailure' (76000 rows, 170 feats) -- bucket openml|classification|large|f>60: rate 0.50, untried bucket (explore), sampled 0.987
+[14:02:35]    6. manual:4534 'PhishingWebsites' (11055 rows, 30 feats) -- bucket manual|classification|medium|f20-60: rate 0.50, untried bucket (explore), sampled 0.974
+[14:02:35]    7. manual:1590 'adult' (48842 rows, 14 feats) -- bucket manual|classification|medium|f<20: rate 0.50, untried bucket (explore), sampled 0.968
+[14:02:35]    8. openml:47108 'bkd1kmc1Dataset5' (1797 rows, 64 feats) -- bucket openml|regression|small|f>60: rate 0.50, untried bucket (explore), sampled 1.000
+[14:02:35]    9. openml:46947 'online_shoppers_intention' (12330 rows, 17 feats) -- bucket openml|classification|medium|f<20: rate 0.50, untried bucket (explore), sampled 0.964
+[14:02:35]   10. openml:46935 'HR_Analytics_Job_Change_of_Data_Scientists' (19158 rows, 12 feats) -- bucket openml|classification|medium|f<20: rate 0.50, untried bucket (explore), sampled 0.843
+[14:02:35]   11. openml:48185 'TabClustPFN-openml-16-v1-6c4e5550' (1000 rows, 64 feats) -- bucket openml|classification|small|f>60: rate 0.50, untried bucket (explore), sampled 0.970
+[14:02:35]   12. manual:42225 'diamonds' (53940 rows, 9 feats) -- bucket manual|regression|large|f<20: rate 0.50, untried bucket (explore), sampled 0.973
+[14:02:35] [1/12] openml:47177 'check_times'
+[14:02:39]   built scout-check-times-47177 (1.4 MB, 13626 rows, regression); running gates
+[14:03:27]     PASS valid: hills check passed and commit succeeded
+[14:03:27]     PASS baseline_scores: baseline 100.0426
+[14:03:27]     PASS deterministic: two reference evals differ by 0.00000
+[14:03:27]     PASS fast: reference eval took 22.9s (limit 120s)
+[14:03:27]     PASS headroom: reference RMSE is 25.8% lower than baseline (need 10%)
+[14:03:27]     PASS not_trivial: reference RMSE 74.22 vs baseline 100
+[14:03:27]     PASS no_leak: best single feature 'imports' RMSE 86.62 vs reference 74.22
+[14:03:27]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 2717 rows; expected one per row of test_features.csv (2724))
+[14:03:37]   SHIPPED scout-check-times-47177: baseline 100.0426 -> reference 74.2182; bundle runs/2026-11-22-1/bundles/scout-check-times-47177.hill.tar
+[14:03:37] [2/12] manual:537 'houses'
+[14:03:56]   built scout-houses-537 (1.41 MB, 20640 rows, regression); running gates
+[14:04:43]     PASS valid: hills check passed and commit succeeded
+[14:04:43]     PASS baseline_scores: baseline 114210.6445
+[14:04:43]     PASS deterministic: two reference evals differ by 0.00000
+[14:04:43]     PASS fast: reference eval took 22.5s (limit 120s)
+[14:04:43]     PASS headroom: reference RMSE is 59.0% lower than baseline (need 10%)
+[14:04:43]     PASS not_trivial: reference RMSE 4.682e+04 vs baseline 1.142e+05
+[14:04:43]     PASS no_leak: best single feature 'median_income' RMSE 8.055e+04 vs reference 4.682e+04
+[14:04:43]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 4121 rows; expected one per row of test_features.csv (4128))
+[14:04:55]   SHIPPED scout-houses-537: baseline 114210.6445 -> reference 46815.7237; bundle runs/2026-11-22-1/bundles/scout-houses-537.hill.tar
+[14:04:55] [3/12] openml:47285 'AmesHousing_Analitica_Kag'
+[14:05:05]   built scout-ameshousing-analitica-47285 (1.04 MB, 2930 rows, regression); running gates
+[14:05:52]     PASS valid: hills check passed and commit succeeded
+[14:05:52]     PASS baseline_scores: baseline 84644.3357
+[14:05:52]     PASS deterministic: two reference evals differ by 0.00000
+[14:05:52]     PASS fast: reference eval took 22.7s (limit 120s)
+[14:05:52]     PASS headroom: reference RMSE is 69.3% lower than baseline (need 10%)
+[14:05:52]     PASS not_trivial: reference RMSE 2.601e+04 vs baseline 8.464e+04
+[14:05:52]     PASS no_leak: best single feature 'Overall_Qual' RMSE 4.595e+04 vs reference 2.601e+04
+[14:05:52]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 579 rows; expected one per row of test_features.csv (586))
+[14:06:03]   SHIPPED scout-ameshousing-analitica-47285: baseline 84644.3357 -> reference 26012.2509; bundle runs/2026-11-22-1/bundles/scout-ameshousing-analitica-47285.hill.tar
+[14:06:03] learned: buckets.json updated (3 buckets); memory.md rewritten
+[14:06:03] done: 3 attempted, 3 built, 3 shipped; report runs/2026-11-22-1/report.md

@@ -1,0 +1,54 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0}
+html,body{width:1280px;height:720px;overflow:hidden}
+body{background:radial-gradient(1200px 700px at 78% 10%,#24402f 0%,#121a14 55%,#0c110d 100%);font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:#ecebe4;position:relative}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(124,195,166,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(124,195,166,.07) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,transparent 0%,#000 55%)}
+svg.range{position:absolute;left:0;right:0;bottom:0;width:1280px;height:430px}
+.copy{position:absolute;left:72px;top:72px;width:640px}
+.brand{display:flex;align-items:center;gap:14px;font-weight:700;font-size:30px;letter-spacing:-.01em}
+.brand svg{width:46px;height:46px}
+h1{font-size:64px;line-height:1.04;letter-spacing:-.035em;margin-top:34px;font-weight:750}
+h1 em{font-style:normal;color:#7cc3a6}
+p{font-size:24px;line-height:1.4;color:#b9b8ad;margin-top:20px;max-width:560px}
+.chips{position:absolute;right:64px;top:78px;display:flex;flex-direction:column;gap:12px;align-items:flex-end}
+.chip{background:rgba(27,28,24,.75);border:1px solid #2f3a32;border-radius:14px;padding:12px 16px;font-size:18px;color:#ecebe4;backdrop-filter:blur(4px);display:flex;gap:12px;align-items:center}
+.chip b{font-size:26px;font-variant-numeric:tabular-nums;color:#7cc3a6;min-width:34px;text-align:right}
+.chip.alt b{color:#e7ab4f}
+.tag{position:absolute;left:72px;bottom:44px;font-size:17px;color:#d8d7cf;letter-spacing:.02em;display:flex;gap:10px}
+.tag span{background:rgba(12,17,13,.7);border:1px solid #2f3a32;padding:7px 12px;border-radius:99px}
+</style></head><body>
+<div class="grid"></div>
+<svg class="range" viewBox="0 0 1280 430" preserveAspectRatio="none">
+ <defs>
+  <linearGradient id="fade" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#0c110d" stop-opacity="0"/><stop offset="1" stop-color="#0c110d" stop-opacity=".85"/></linearGradient>
+ </defs>
+ <!-- back ridge -->
+ <polygon points="560,430 700,170 760,230 860,90 960,210 1010,160 1120,280 1280,190 1280,430" fill="#1d3a2c"/>
+ <!-- peaks: green = approachable, amber = moderate; snow caps = reference score -->
+ <g>
+  <polygon points="640,430 770,200 900,430" fill="#4f9a78"/><polygon points="770,200 900,430 790,430" fill="#3d7f62"/>
+  <polygon points="770,200 752,232 770,226 790,236" fill="#f4f3ee"/>
+  <polygon points="820,430 1000,60 1180,430" fill="#6fcb93"/><polygon points="1000,60 1180,430 1030,430" fill="#56a97a"/>
+  <polygon points="1000,60 974,112 1000,102 1028,116" fill="#f4f3ee"/>
+  <polygon points="1060,430 1170,240 1280,430" fill="#e7ab4f"/><polygon points="1170,240 1280,430 1185,430" fill="#c98f39"/>
+  <polygon points="1170,240 1155,266 1170,261 1186,270" fill="#f4f3ee"/>
+  <polygon points="430,430 560,250 690,430" fill="#3f8565"/><polygon points="560,250 690,430 580,430" fill="#336e53"/>
+  <polygon points="560,250 545,272 560,268 576,276" fill="#f4f3ee"/>
+ </g>
+ <!-- climb path to the summit -->
+ <polyline points="860,430 900,360 885,320 935,250 955,190 985,130 1000,72" fill="none" stroke="#e7ab4f" stroke-width="4" stroke-dasharray="2 10" stroke-linecap="round"/>
+ <circle cx="1000" cy="66" r="9" fill="#e7ab4f" stroke="#0c110d" stroke-width="3"/>
+ <rect x="0" y="300" width="1280" height="130" fill="url(#fade)"/>
+</svg>
+<div class="copy">
+ <div class="brand"><svg viewBox="0 0 32 32"><path d="M2 26 L11 11 L16 18 L21 8 L30 26 Z" fill="#7cc3a6"/><path d="M21 8 L24.5 15 L21 13.5 L18.5 15 Z" fill="#121a14" opacity=".9"/></svg>Hill Scout</div>
+ <h1>Public data in.<br><em>Verified AI challenges</em> out.</h1>
+ <p>An autonomous scout builds fresh prediction tasks every day, and anyone can get no-code predictions from a spreadsheet.</p>
+</div>
+<div class="chips">
+ <div class="chip"><b>9</b>hills passed 8 quality checks</div>
+ <div class="chip"><b>7</b>rejected by the gates</div>
+ <div class="chip alt"><b>3</b>sources: OpenML, Kaggle, web</div>
+</div>
+<div class="tag"><span>Kaggle · OpenML · CSV</span><span>3D catalogue</span><span>No-code Predict</span><span>AutoLab hills</span></div>
+</body></html>

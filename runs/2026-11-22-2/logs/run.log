@@ -1,0 +1,80 @@
+[14:07:02] run 2026-11-22-2: max_hills=3 max_candidates=12
+[14:07:02] memory.md: read, lessons below
+[14:07:02]   memory - regression datasets shipped 3 of 3 attempts
+[14:07:02]   memory - OpenML candidates shipped 2 of 2 attempts
+[14:07:02]   memory - datasets of 10k-50k rows shipped 2 of 2 attempts
+[14:07:02] source openml: 250 discovered, 186 in scope (rows/features/task type)
+[14:07:02] source manual: 10 discovered, 10 in scope (rows/features/task type)
+[14:07:02] source kaggle: skipped (no Kaggle credentials (~/.kaggle/kaggle.json or KAGGLE_USERNAME/KAGGLE_KEY))
+[14:07:02] pool: 196 in scope, 193 not seen before
+[14:07:02] excluding 2 unseen candidate(s) whose name family was attempted in an earlier run
+[14:07:02] picked 12 candidates (Thompson sampling, one per name family):
+[14:07:02]    1. openml:47108 'bkd1kmc1Dataset5' (1797 rows, 64 feats) -- bucket openml|regression|small|f>60: rate 0.67, 1 prior attempt(s), sampled 0.955
+[14:07:02]    2. openml:47171 'Uber_Ride_Analytics' (150000 rows, 24 feats) -- bucket openml|classification|large|f20-60: rate 0.50, untried bucket (explore), sampled 0.995
+[14:07:02]    3. openml:47023 'MedMCQA' (182822 rows, 9 feats) -- bucket openml|classification|large|f<20: rate 0.50, untried bucket (explore), sampled 0.991
+[14:07:02]    4. manual:40701 'churn' (5000 rows, 20 feats) -- bucket manual|classification|small|f20-60: rate 0.50, untried bucket (explore), sampled 0.977
+[14:07:02]    5. openml:47107 'bkd1kmc1' (1797 rows, 64 feats) -- bucket openml|regression|small|f>60: rate 0.67, 1 prior attempt(s), sampled 0.897
+[14:07:02]    6. openml:47003 'melbourne_airbnb' (18316 rows, 95 feats) -- bucket openml|classification|medium|f>60: rate 0.50, untried bucket (explore), sampled 0.995
+[14:07:02]    7. manual:44 'spambase' (4601 rows, 57 feats) -- bucket manual|classification|small|f20-60: rate 0.50, untried bucket (explore), sampled 0.842
+[14:07:02]    8. openml:47016 'TRS_SCZ' (10000 rows, 26 feats) -- bucket openml|regression|medium|f20-60: rate 0.67, 1 prior attempt(s), sampled 0.978
+[14:07:02]    9. openml:48248 'food_calorie_searches_36_languages' (3230 rows, 5 feats) -- bucket openml|regression|small|f<20: rate 0.50, untried bucket (explore), sampled 0.983
+[14:07:02]   10. manual:1590 'adult' (48842 rows, 14 feats) -- bucket manual|classification|medium|f<20: rate 0.50, untried bucket (explore), sampled 0.994
+[14:07:02]   11. openml:48199 'TabClustPFN-uci-spambase-v1-b86e2301' (1000 rows, 57 feats) -- bucket openml|classification|small|f20-60: rate 0.50, untried bucket (explore), sampled 0.963
+[14:07:02]   12. openml:46908 'APSFailure' (76000 rows, 170 feats) -- bucket openml|classification|large|f>60: rate 0.50, untried bucket (explore), sampled 0.970
+[14:07:02] [1/12] openml:47108 'bkd1kmc1Dataset5'
+[14:07:07]   skip (data): regression target is not a continuous number
+[14:07:07] [2/12] openml:47171 'Uber_Ride_Analytics'
+[14:07:14]   built scout-uber-ride-analytics-47171 (22.58 MB, 125000 rows, classification); running gates
+[14:08:07]     PASS valid: hills check passed and commit succeeded
+[14:08:07]     PASS baseline_scores: baseline 0.2000
+[14:08:07]     PASS deterministic: two reference evals differ by 0.00000
+[14:08:07]     PASS fast: reference eval took 24.8s (limit 120s)
+[14:08:07]     PASS headroom: reference beats baseline by 0.8000 balanced accuracy (need 0.05)
+[14:08:07]     FAIL not_trivial: reference balanced accuracy 1.0000 (must be under 0.98)
+[14:08:07]     PASS no_leak: best single feature 'AVG_VTAT' scores 0.4658 vs reference 1.0000
+[14:08:07]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 24993 rows; expected one per row of test_features.csv (25000))
+[14:08:07]   rejected scout-uber-ride-analytics-47171: not_trivial: reference balanced accuracy 1.0000 (must be under 0.98)
+[14:08:07] [3/12] openml:47023 'MedMCQA'
+[14:08:10]   skip (metadata): license 'Hugging Face' not on the redistribution allow-list
+[14:08:10] [4/12] manual:40701 'churn'
+[14:08:15]   built scout-churn-40701 (0.49 MB, 5000 rows, classification); running gates
+[14:09:02]     PASS valid: hills check passed and commit succeeded
+[14:09:02]     PASS baseline_scores: baseline 0.5000
+[14:09:02]     PASS deterministic: two reference evals differ by 0.00000
+[14:09:02]     PASS fast: reference eval took 22.8s (limit 120s)
+[14:09:02]     PASS headroom: reference beats baseline by 0.3682 balanced accuracy (need 0.05)
+[14:09:02]     PASS not_trivial: reference balanced accuracy 0.8682 (must be under 0.98)
+[14:09:02]     PASS no_leak: best single feature 'number_customer_service_calls' scores 0.5465 vs reference 0.8682
+[14:09:02]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 993 rows; expected one per row of test_features.csv (1000))
+[14:09:11] describe: claude -p reply rejected (empty, contained digits, or wrong shape)
+[14:09:13]   SHIPPED scout-churn-40701: baseline 0.5000 -> reference 0.8682; bundle runs/2026-11-22-2/bundles/scout-churn-40701.hill.tar
+[14:09:13] [5/12] openml:47107 'bkd1kmc1'
+[14:09:20]   skip (data): regression target is not a continuous number
+[14:09:20] [6/12] openml:47003 'melbourne_airbnb'
+[14:09:23]   skip (metadata): license 'Kaggle and Melbourne Airbnb Open Data' not on the redistribution allow-list
+[14:09:23] [7/12] manual:44 'spambase'
+[14:09:27]   built scout-spambase-44 (1.17 MB, 4601 rows, classification); running gates
+[14:10:14]     PASS valid: hills check passed and commit succeeded
+[14:10:14]     PASS baseline_scores: baseline 0.5000
+[14:10:14]     PASS deterministic: two reference evals differ by 0.00000
+[14:10:14]     PASS fast: reference eval took 22.6s (limit 120s)
+[14:10:14]     PASS headroom: reference beats baseline by 0.4320 balanced accuracy (need 0.05)
+[14:10:14]     PASS not_trivial: reference balanced accuracy 0.9320 (must be under 0.98)
+[14:10:14]     PASS no_leak: best single feature 'word_freq_your' scores 0.7630 vs reference 0.9320
+[14:10:14]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 913 rows; expected one per row of test_features.csv (920))
+[14:10:23]   SHIPPED scout-spambase-44: baseline 0.5000 -> reference 0.9320; bundle runs/2026-11-22-2/bundles/scout-spambase-44.hill.tar
+[14:10:23] [8/12] openml:47016 'TRS_SCZ'
+[14:10:32]   skip (data): regression target is not a continuous number
+[14:10:32] [9/12] openml:48248 'food_calorie_searches_36_languages'
+[14:10:43]   built scout-food-calorie-searches-48248 (0.23 MB, 3230 rows, regression); running gates
+[14:11:31]     PASS valid: hills check passed and commit succeeded
+[14:11:31]     PASS baseline_scores: baseline 3152.8752
+[14:11:31]     PASS deterministic: two reference evals differ by 0.00000
+[14:11:31]     PASS fast: reference eval took 23.1s (limit 120s)
+[14:11:31]     PASS headroom: reference RMSE is 61.9% lower than baseline (need 10%)
+[14:11:31]     PASS not_trivial: reference RMSE 1201 vs baseline 3153
+[14:11:31]     PASS no_leak: best single feature 'language' RMSE 2342 vs reference 1201
+[14:11:31]     PASS rejects_junk: wrong-row-count submission -> passed=False (predictions.csv has 639 rows; expected one per row of test_features.csv (646))
+[14:11:42]   SHIPPED scout-food-calorie-searches-48248: baseline 3152.8752 -> reference 1200.7621; bundle runs/2026-11-22-2/bundles/scout-food-calorie-searches-48248.hill.tar
+[14:11:42] learned: buckets.json updated (6 buckets); memory.md rewritten
+[14:11:42] done: 9 attempted, 7 built, 3 shipped; report runs/2026-11-22-2/report.md

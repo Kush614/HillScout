@@ -1,0 +1,16 @@
+{"key": "openml:47177", "family": "check_times", "title": "check_times", "run_id": "2026-11-22-1", "status": "shipped"}
+{"key": "manual:537", "family": "houses", "title": "houses", "run_id": "2026-11-22-1", "status": "shipped"}
+{"key": "openml:47285", "family": "ameshousing_analitica_kag", "title": "AmesHousing_Analitica_Kag", "run_id": "2026-11-22-1", "status": "shipped"}
+{"key": "openml:47108", "family": "bkd1kmc1dataset", "title": "bkd1kmc1Dataset5", "run_id": "2026-11-22-2", "status": "prepare: prepare: regression target is not a continuous number"}
+{"key": "openml:47171", "family": "uber_ride_analytics", "title": "Uber_Ride_Analytics", "run_id": "2026-11-22-2", "status": "gates: not_trivial: reference balanced accuracy 1.0000 (must be under 0.98)"}
+{"key": "openml:47023", "family": "medmcqa", "title": "MedMCQA", "run_id": "2026-11-22-2", "status": "enrich: license 'Hugging Face' not on the redistribution allow-list"}
+{"key": "manual:40701", "family": "churn", "title": "churn", "run_id": "2026-11-22-2", "status": "shipped"}
+{"key": "openml:47107", "family": "bkd1kmc", "title": "bkd1kmc1", "run_id": "2026-11-22-2", "status": "prepare: prepare: regression target is not a continuous number"}
+{"key": "openml:47003", "family": "melbourne_airbnb", "title": "melbourne_airbnb", "run_id": "2026-11-22-2", "status": "enrich: license 'Kaggle and Melbourne Airbnb Open Data' not on the redistribution allow-list"}
+{"key": "manual:44", "family": "spambase", "title": "spambase", "run_id": "2026-11-22-2", "status": "shipped"}
+{"key": "openml:47016", "family": "trs_scz", "title": "TRS_SCZ", "run_id": "2026-11-22-2", "status": "prepare: prepare: regression target is not a continuous number"}
+{"key": "openml:48248", "family": "food", "title": "food_calorie_searches_36_languages", "run_id": "2026-11-22-2", "status": "shipped"}
+{"key": "kaggle:uciml/red-wine-quality-cortez-et-al-2009", "family": "red wine quality", "title": "Red Wine Quality", "run_id": "2026-11-22-3", "status": "shipped"}
+{"key": "kaggle:pavansubhasht/ibm-hr-analytics-attrition-dataset", "family": "ibm", "title": "IBM HR Analytics Employee Attrition & Performance", "run_id": "2026-11-22-3", "status": "shipped"}
+{"key": "kaggle:abdullah1afify/ntl-generations", "family": "name", "title": "Name That LLM: extra GPT and Gemini generations", "run_id": "2026-11-22-3", "status": "gates: not_trivial: reference balanced accuracy 1.0000 (must be under 0.98)"}
+{"key": "kaggle:adityadesai13/used-car-dataset-ford-and-mercedes", "family": "100,000", "title": "100,000 UK Used Car Data set", "run_id": "2026-11-22-3", "status": "shipped"}

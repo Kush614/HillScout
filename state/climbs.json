@@ -1,0 +1,9 @@
+[
+  {"hill": "scout-churn-40701", "climb": "kush614/churn-climb-1",
+   "url": "https://app.autolab.ai/projects/kush614/churn-climb-1",
+   "status": "stopped: reached its $5 spending cap",
+   "attempts": [
+     {"id": "9d67e754", "title": "Baseline: predict the majority class", "value": 0.5, "status": "merged", "ts": "2026-11-22T22:48:23Z"},
+     {"id": "f1176447", "title": "Gradient boosting with engineered usage totals", "value": null, "status": "queued (budget reached before it ran)", "ts": "2026-11-22T22:50:30Z"}
+   ]}
+]

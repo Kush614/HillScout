@@ -1,0 +1,56 @@
+{
+  "kaggle|classification|small|f20-60": {
+    "successes": 1,
+    "failures": 0,
+    "engagement_bonus": 0,
+    "rate": 0.6667
+  },
+  "kaggle|classification|small|f<20": {
+    "successes": 1,
+    "failures": 1,
+    "engagement_bonus": 0,
+    "rate": 0.5
+  },
+  "kaggle|regression|medium|f<20": {
+    "successes": 1,
+    "failures": 0,
+    "engagement_bonus": 0,
+    "rate": 0.6667
+  },
+  "manual|classification|small|f20-60": {
+    "successes": 2,
+    "failures": 0,
+    "engagement_bonus": 1,
+    "rate": 0.8
+  },
+  "manual|regression|medium|f<20": {
+    "successes": 1,
+    "failures": 0,
+    "engagement_bonus": 0,
+    "rate": 0.6667
+  },
+  "openml|classification|large|f20-60": {
+    "successes": 0,
+    "failures": 1,
+    "engagement_bonus": 0,
+    "rate": 0.3333
+  },
+  "openml|regression|medium|f20-60": {
+    "successes": 1,
+    "failures": 1,
+    "engagement_bonus": 0,
+    "rate": 0.5
+  },
+  "openml|regression|small|f<20": {
+    "successes": 1,
+    "failures": 0,
+    "engagement_bonus": 0,
+    "rate": 0.6667
+  },
+  "openml|regression|small|f>60": {
+    "successes": 1,
+    "failures": 2,
+    "engagement_bonus": 0,
+    "rate": 0.4
+  }
+}
