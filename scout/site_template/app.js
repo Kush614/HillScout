@@ -4,6 +4,7 @@ import { mountScene, headroom } from "./scene.js";
 import { renderPredict } from "./predict.js";
 import { renderAbout } from "./about.js";
 import { mountJourney } from "./about3d.js";
+import { mountChat } from "./chat.js";
 
 const $ = (sel, el = document) => el.querySelector(sel);
 const app = $("#app");
@@ -613,4 +614,5 @@ fetch("data/site.json").then((r) => r.json()).then((d) => {
   DATA = d;
   $("#foot").innerHTML = `Built from the scout's own records on ${esc(d.generated.replace("T", " ").replace("+00:00", " UTC"))}. ${d.totals.public} of ${d.totals.shipped} hills are public on AutoLab. Analytics: page views and clicks, no session recording.`;
   route();
+  try { mountChat(d, { esc, track }); } catch (e) { /* the helper is optional */ }
 }).catch(() => { app.innerHTML = `<div class="empty">Couldn't load the catalogue data. Refresh to try again.</div>`; });

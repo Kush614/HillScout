@@ -18,7 +18,7 @@ Hill Scout is an autonomous agent that finds public tabular datasets on OpenML, 
 | Rejected by the gates | 7 (leaks, trivially easy tasks, licences, unusable targets) |
 | Sources | OpenML, Kaggle (public API, no login), CSV links |
 | Hosting spend (Egbe) | $0 against a self-imposed $15 cap |
-| Tests | 43 (`uv run pytest`) |
+| Tests | 44 (`uv run pytest`) |
 
 ---
 
@@ -146,6 +146,16 @@ A page for people who have never trained a model:
 ![How it works: why this exists](docs/screenshots/how-it-works-why.png)
 ![How it works: 3D replay of the real runs](docs/screenshots/how-it-works-replay.png)
 
+### Ask Scout (helper chat)
+A chat button on every page opens **Ask Scout**:
+- **Pinned questions** change with the page you're on, e.g. "Is my data safe?" on Predict, or "Which hill should I try first?" on Explore.
+- **Typed questions** are matched to the closest topic.
+- **Hill and dataset names** are looked up live, e.g. "tell me about red wine quality" or "what happened to Uber Ride Analytics".
+
+It answers only from `site.json` and a built-in knowledge base, entirely in the browser. That means no model calls, no cost, and no invented numbers. Analytics record the topic, never the typed text. Checked by `tests/js/chat_check.mjs`.
+
+![Ask Scout helper chat](docs/screenshots/ask-scout.png)
+
 ### Console
 Every run's picks with the bandit's draw, why each candidate was shipped or rejected, a before/after chart of bucket rates, the lessons learned, and spend against the caps.
 
@@ -211,7 +221,7 @@ Requirements: [uv](https://docs.astral.sh/uv/), `hills` (`uv tool install hills`
 git clone https://github.com/Kush614/HillScout.git
 cd HillScout
 uv sync
-uv run pytest                         # 43 tests, fast
+uv run pytest                         # 44 tests, fast
 
 # one full cycle: discover, pick, build, gate, ship (pushes are private)
 SCOUT_PUSH=0 uv run scout run --max-hills 3 --max-candidates 12
@@ -303,7 +313,7 @@ scout/
   report.py           runs/<id>/report.md
   site.py             exports state/ + runs/ to site/data/site.json and copies the template
   site_template/      index.html, style.css, app.js, scene.js (three.js), predict.js, ml.js,
-                      about.js + about3d.js (How it works page),
+                      about.js + about3d.js (How it works page), chat.js (Ask Scout helper),
                       server.py, Dockerfile, vendored pg8000 wheels, sample CSV
   hill_template/      eval.py, baseline + reference submissions, hill tests
 tests/                pytest suite (+ tests/js/ml_check.mjs for the browser model)

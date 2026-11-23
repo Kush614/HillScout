@@ -383,3 +383,17 @@ def test_readme_text_names_the_real_source():
     assert "from Kaggle" in subtitle(k, prep) and "OpenML" not in subtitle(k, prep)
     assert "Kaggle dataset" in template_sentences(k, prep)
     assert "from OpenML" in subtitle(Candidate("openml", "44", "spambase", "u"), prep)
+
+
+def test_ask_scout_helper_answers_from_real_data(tmp_path):
+    """The site's chat helper: pinned questions, typed questions, name lookups, safe fallback."""
+    import shutil
+    import subprocess as sp
+    if not shutil.which("node"):
+        pytest.skip("node not installed")
+    from scout.site import export
+    root = Path(__file__).resolve().parents[1]
+    data = tmp_path / "site.json"
+    data.write_text(json.dumps(export(root)))
+    r = sp.run(["node", str(root / "tests/js/chat_check.mjs"), str(data)], capture_output=True, text=True)
+    assert r.returncode == 0, r.stdout + r.stderr
