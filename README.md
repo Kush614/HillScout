@@ -137,6 +137,15 @@ Import a dataset from Kaggle, OpenML or any CSV link, or drop a file. The page s
 
 ![Bring your data: Kaggle import](docs/screenshots/bring-import.png)
 
+### How it works (plain-language explainer)
+A page for people who have never trained a model:
+- **Why this exists:** the industry problems it tackles, for teams building AI agents (stale benchmarks, slow hand-built tests, misleading scores, licences) and for business teams (spreadsheet data, scarce data scientists, distrust of black boxes, privacy). Each problem is paired with what Hill Scout does about it.
+- **A 3D replay of the real runs (three.js):** every dataset the scout tried rides past the checkpoints. Rejected ones turn red and fall off at the check that stopped them, with the reason in plain words. Shipped ones plant a flag on the mountain.
+- **Diagrams:** what a hill is, the 8 checks with real rejections, how the bandit chooses (with its learned rates), the daily loop, and Predict in 3 steps. Also a glossary and FAQ.
+
+![How it works: why this exists](docs/screenshots/how-it-works-why.png)
+![How it works: 3D replay of the real runs](docs/screenshots/how-it-works-replay.png)
+
 ### Console
 Every run's picks with the bandit's draw, why each candidate was shipped or rejected, a before/after chart of bucket rates, the lessons learned, and spend against the caps.
 
@@ -226,7 +235,7 @@ cd site && PORT=8090 REQUESTS_FILE=/tmp/requests.jsonl python3 server.py
 | `scout daily` | The same, with defaults; safe for cron |
 | `scout report` | Rebuild `report.md` for the latest run |
 | `scout private data.csv --target <col>` | Run your own CSV through the same pipeline into a gated **private** hill (logged separately, so it never moves the public bandit) |
-| `scout site [--out DIR]` | Build the interactive site (Explore, Hill detail, Predict, Bring your data, Console) |
+| `scout site [--out DIR]` | Build the interactive site (Explore, Hill detail, Predict, Bring your data, Console, How it works) |
 | `scout catalog` | Legacy single-page catalogue (`catalog/index.html`) |
 | `scout engagement` | Refresh climb counts from AutoLab into `state/engagement.csv` |
 | `scout requests` | List private-hill requests stored by the hosted site (Egbe Postgres) |
@@ -294,6 +303,7 @@ scout/
   report.py           runs/<id>/report.md
   site.py             exports state/ + runs/ to site/data/site.json and copies the template
   site_template/      index.html, style.css, app.js, scene.js (three.js), predict.js, ml.js,
+                      about.js + about3d.js (How it works page),
                       server.py, Dockerfile, vendored pg8000 wheels, sample CSV
   hill_template/      eval.py, baseline + reference submissions, hill tests
 tests/                pytest suite (+ tests/js/ml_check.mjs for the browser model)

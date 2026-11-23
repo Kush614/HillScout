@@ -227,3 +227,42 @@ ul.plain { margin: 0 0 10px; padding-left: 18px; font-size: 15.5px; } ul.plain l
 label.btn input[type=file] { display: none; }
 .grid2 > *, .grid3 > * { min-width: 0; }
 @media (max-width: 600px) { .top-in { flex-wrap: wrap; gap: 8px 12px; } .nav { order: 3; width: 100%; } .nav a { padding: 5px 9px; } }
+
+/* How it works */
+.about-p { max-width: 760px; }
+.about-tldr { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.about-tldr .panel { padding: 14px 16px; } .about-tldr b { display: block; margin-bottom: 4px; } .about-tldr span { color: var(--muted); font-size: 14px; }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.why-who { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--accent); font-weight: 650; }
+.why-col h3 { margin: 6px 0 12px; font-size: 17px; }
+.why-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14px; }
+.why-p { color: var(--muted); } .why-p b { color: var(--fg); }
+.why-s { background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; position: relative; }
+.why-s::before { content: "→ "; color: var(--accent); font-weight: 700; }
+.why-bridge { margin-top: 12px; padding: 12px 16px; }
+.journey-wrap { min-height: 440px; } #journey { position: absolute; inset: 0; }
+.journey-count { position: absolute; left: 12px; top: 10px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; font-size: 13px; font-variant-numeric: tabular-nums; }
+.journey-bar { display: flex; gap: 12px; align-items: center; justify-content: space-between; margin-top: 10px; flex-wrap: wrap; }
+.journey-now { flex: 1 1 320px; min-height: 44px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; font-size: 14px; }
+.journey-log { list-style: none; padding: 0; margin: 10px 0 0; max-height: 190px; overflow: auto; font-size: 13.5px; }
+.journey-log li { padding: 5px 0; border-bottom: 1px dashed var(--line); }
+.journey-log .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; }
+.journey-log .ok .dot { background: var(--pass); } .journey-log .no .dot { background: var(--fail); }
+.diagram { width: 100%; height: auto; display: block; margin-top: 8px; }
+.checks { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 10px; }
+.check { display: grid; grid-template-columns: 34px 1fr; gap: 12px; padding: 14px 16px; }
+.check h3 { margin: 2px 0 4px; font-size: 15.5px; } .check p { margin: 0 0 4px; font-size: 14px; }
+.check-n { width: 30px; height: 30px; border-radius: 50%; background: var(--accent); color: var(--accent-fg); display: grid; place-items: center; font-weight: 700; }
+.check-ex { margin-top: 6px !important; font-size: 13px !important; border-left: 3px solid var(--fail); padding-left: 8px; }
+.bk-row { display: grid; grid-template-columns: 1fr 90px 40px; gap: 10px; align-items: center; font-size: 13px; padding: 4px 0; }
+.bk-bar { height: 8px; background: var(--bg-2); border-radius: 4px; overflow: hidden; } .bk-bar i { display: block; height: 100%; background: var(--accent); }
+.bk-row b { text-align: right; font-variant-numeric: tabular-nums; }
+.about-list { padding-left: 18px; } .about-list li { margin-bottom: 6px; }
+.gloss { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; margin: 0; font-size: 14px; }
+.gloss dt { font-weight: 650; } .gloss dd { margin: 0; color: var(--muted); }
+.faq details { border-top: 1px solid var(--line); padding: 10px 0; } .faq summary { cursor: pointer; font-weight: 600; } .faq details p { color: var(--muted); margin: 8px 0 0; }
+@media (max-width: 900px) { .why-grid, .checks, .about-tldr { grid-template-columns: 1fr; } }
+@media (max-width: 560px) { .why-row { grid-template-columns: 1fr; } .journey-wrap { min-height: 340px; } .bk-row { grid-template-columns: 1fr 60px 36px; } }
+.diagram-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+@media (max-width: 640px) { .diagram { min-width: 600px; } .diagram-wrap::after { content: "swipe to see the whole diagram →"; display: block; font-size: 12px; color: var(--faint); margin-top: 4px; } }
+.journey-count:empty { display: none; }

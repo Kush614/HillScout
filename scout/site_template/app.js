@@ -1,7 +1,9 @@
-// Hill Scout site: Explore (3D hill range + filters), Hill detail, Bring your data, Console.
+// Hill Scout site: Explore (3D hill range + filters), Hill detail, Predict, Bring your data, Console, How it works.
 // All numbers come from data/site.json, which `scout site` exports from the scout's own records.
 import { mountScene, headroom } from "./scene.js";
 import { renderPredict } from "./predict.js";
+import { renderAbout } from "./about.js";
+import { mountJourney } from "./about3d.js";
 
 const $ = (sel, el = document) => el.querySelector(sel);
 const app = $("#app");
@@ -63,6 +65,7 @@ function route() {
   else if (page === "predict") renderPredict(app, { $, esc, parseCSV, track, toast });
   else if (page === "bring") renderBring();
   else if (page === "console") renderConsole();
+  else if (page === "about") scene = renderAbout(app, DATA, { esc, track, mountJourney });
   else renderExplore();
   window.scrollTo({ top: 0 });
 }
